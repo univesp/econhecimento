@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description" content="">
+
+  <meta name="keywords" content="">
+
+  <title>Univesp | ECOnhecimento</title>
+
+  <link rel="shortcut icon" href="http://apps.univesp.br/common/favicon.ico" type="image/x-icon" />
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+  <!-- Animate CSS. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css"> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.0.css">
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Menu -->
+  <nav>
+    <div class="container d-flex justify-content-end">
+
+      <div class="logo">
+
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img style="background-color: #7bbc9b;" src="https://apps.univesp.br/common/colorida-negativa.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp em letras maiúsculas, sendo a letra V estilizada.">
+          <!-- outras opções de img src: colorida-negativa.svg, traco-positiva.svg, traco-negativa.svg -->
+        </a>
+
+      </div>
+
+      <ul class="nav justify-content-end">
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Menu de acessibilidade">accessibility_new</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            ...
+          </div>
+        </li> -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: #7bbc9b;">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing" id="share-buttons"></div>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+
+    <div id="tela1">
+      <div style="background-color: white; display: flex; flex-direction: column; align-items: center">
+
+        <div id="telaInicial">
+          <!-- título -->
+          <h2><strong>ECO</strong>NHECIMENTO</h2>
+
+          <!-- caixa de baixo -->
+          <div>
+
+            <!-- imagem -->
+            <div class="imagem">
+              <img src="assets/folha.png">
+            </div>
+
+            <!-- Paragrafo e botão -->
+            <div class="paragrafoBotao container">
+              <!-- Texto -->
+              <div>
+                <p>O conhecimento das questões ambientais é fundamental para o desenvolvimento de uma compreensão integrada do meio ambiente em suas múltiplas e complexas relações.</p>
+                <p>É por meio da educação ambiental que se constroem as habilidades, atitudes e competências para uso consciente dos recursos naturais. </p>
+                <p>Este recurso apresenta os princípios básicos da educação ambiental e ferramentas que auxiliam no processo de conscientização ambiental.</p>
+              </div>
+              <!-- Botão -->
+              <div id="boaEcoleitura">Boa ECOLeitura</div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div><!-- Fim do fundo branco -->
+    </div>
+
+
+    <div style="background-color: white">
+      <div id="tela2" style="display: none">
+        <div style="background-color:white">
+          <div class="container" style="padding-top: 25px;">
+            <p>Veja o que a legislação dispõe sobre a educação ambiental:</p>
+          </div>
+
+          <div style="background-color:#e5fbc4">
+            <div class="container" style="padding: 25px 0px 15px 0px">
+              <p><strong>Lei N° 9.795, de 27 de abril de 1999.</strong></p>
+              <p><strong>Art. 1º</strong> Entendem-se por educação ambiental os processos por meio dos quais o indivíduo e a coletividade constroem valores sociais, conhecimentos, habilidades, atitudes e competências voltadas para a conservação do
+                meio
+                ambiente, bem de uso comum do povo, essencial à sadia qualidade de vida e sua sustentabilidade.</p>
+              <p><strong>Art. 2º</strong> A educação ambiental é um componente essencial e permanente da educação nacional, devendo estar presente, de forma articulada, em todos os níveis e modalidades do processo educativo, em caráter formal e
+                não-formal.
+              </p>
+            </div>
+          </div>
+
+          <div style="background-color:white; margin-top:25px">
+            <div class="container">
+              <p>A educação ambiental tenta despertar em todos nós a consciência de que o ser humano é parte do meio ambiente. Ela se desenvolve em um contexto de complexidade, procurando trabalhar não apenas a mudança cultural, mas também a
+                transformação
+                social, assumindo a crise ambiental como uma questão ética e política.</p>
+              <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0px">
+                <img src="assets/figura1.svg" alt="">
+              </div>
+            </div>
+
+
+
+            <div class="container">
+              <p style="color: #7BBC9B"><strong>Princípios básicos da educação ambiental</strong></p>
+              <p style="color: #7BBC9B">Entenda quais são os princípios básicos da educação ambiental.</p>
+              <p><i>Clique nas setas para navegar.</i></p>
+            </div>
+
+
+            <div style="display: flex; justify-content: center; align-items: center">
+              <div class="caixaDoParalax">
+
+                <img src="assets/nuvens.png" id="nuvens" alt="" style="left: 0%;">
+
+                <img src="assets/predios_cena2.png" id="prediosCena2" alt="" style="left: 100%; bottom: -50%;">
+
+                <img src="assets/fundo.png" id="fundo" alt="" style="left:0%;">
+                <!-- Cena 1 -->
+                <img src="assets/meio_cena1.png" id="meioCena1" alt="" style="left:15%;">
+                <!-- Cena 2 -->
+                <img src="assets/meio_cena2.png" id="meioCena2" alt="" style="left:100%;">
+                <!-- Frente -->
+                <img src="assets/frente_cena1.png" id="frenteCena1" alt="" style="left:0%;">
+                <!-- Cena 3 -->
+                <img src="assets/meio_cena3.png" id="meioCena3" alt="" style="left:95%;">
+                <!-- Cena 4 -->
+                <img src="assets/meio_cena4.png" id="meioCena4" alt="" style="left:95%; bottom: 0%;">
+                <img src="assets/meio_cena4_2.png" id="meioCena42" alt="" style="left:95%; bottom: 0%;">
+                <img src="assets/menino.png" id="menino" alt="" style="left:100%; bottom: 14%;">
+                <img src="assets/bicicleta.png" id="bicicleta" alt="" style="bottom: 0%; left: 130%; bottom: 19%;">
+                <img src="assets/terra.png" id="terra" alt="" style="left:23%; bottom:-84%; transform: rotate(39deg);">
+                <img src="assets/pessoas.png" id="pessoas" alt="" style="left:-2%; bottom: -80%">
+                <!-- Cena 5 -->
+                <img src="assets/meio_cena5.png" id="meioCena5" alt="" style="left:95%; bottom: 0%;">
+                <img src="assets/mato_frente_cena5.png" id="matoFrenteCena5" alt="" style="left:95%; bottom: 0%;">
+                <!-- Cena 6 -->
+                <!-- Transição -->
+                <img src="assets/arvore_transicao.png" id="arvoreTransicao" alt="" style="left:100%;">
+                <img src="assets/tronco_transicao.png" id="troncoTransicao" alt="" style="left:100%;">
+                <img src="assets/mato_transicao_cena4.png" id="matoTransicaoCena4" alt="" style="left:95%; bottom: 0%;">
+
+                <!-- Balões de fala -->
+                <img src="assets/fala01.png" id="fala01" alt="" style="bottom: 35%; left: 42%; width:0%">
+                <img src="assets/fala02.png" id="fala02" alt="" style="bottom: 35%; left: 52%; width:0%">
+                <img src="assets/fala03.png" id="fala03" alt="" style="bottom: 35%; left: 72%; width:0%">
+                <img src="assets/fala04.png" id="fala04" alt="" style="bottom: 39%; left: 86%; width:0%">
+
+                <!-- bicicleta 2 -->
+                <img src="assets/bicicleta.png" id="bicicleta2" alt="" style="bottom: 0%; left:-45%; transform: rotateY(180deg);">
+
+              </div>
+            </div>
+
+
+            <div style="display: flex; justify-content: center; align-items: center">
+              <div class="textosParalax">
+                <p style="display: block"></p>
+                <p>Enfoque humanista, holístico, democrático e participativo.</p>
+                <p>Concepção do meio ambiente em sua totalidade, considerando a interdependência entre o meio natural, o socioeconômico e o cultural, sob o enfoque da sustentabilidade.</p>
+                <p>Pluralismo de ideias e concepções pedagógicas, na perspectiva da inter, multi e transdisciplinaridade.</p>
+                <p>Vinculação entre a ética, a educação, o trabalho e as práticas sociais.</p>
+                <p>Garantia de continuidade e permanência do processo educativo. Permanente avaliação crítica do processo educativo.</p>
+                <p>Abordagem articulada das questões ambientais locais,...</p>
+                <p>...regionais, nacionais e globais.</p>
+                <p>Reconhecimento e o respeito à pluralidade e à diversidade individual e cultural.</p>
+              </div>
+            </div>
+
+            <div class="container botaoParalax">
+              <div><i class="fas fa-less-than"></i></div>
+              <div><i class="fas fa-greater-than"></i></div>
+              <div class="botoesMandrake" style="display: none"><i class="fas fa-less-than"></i></div>
+              <div class="botoesMandrake" style="display: none"><i class="fas fa-greater-than"></i></div>
+            </div>
+
+
+
+
+
+
+
+            <hr>
+            <!-- Política dos 4R -->
+
+            <div style="background-color:white; padding-top: 50px;">
+
+              <div class="container">
+                <p style="color: #7BBC9B; font-weight: bold; font-size: 1.2rem">A política dos 4R</p>
+                <p>O desenvolvimento de uma consciência crítica estimula o enfrentamento das questões ambientais e sociais. Por essa razão, é fundamental que a educação ambiental seja implantada nos ambientes públicos e privados. Uma ferramenta que pode auxiliar no processo de conscientização ambiental e mudança de comportamento é a política dos 4R: repensar, reduzir, reutilizar e reciclar.</p>
+                <p><i>Clique nos elementos para visualizar a descrição.</i></p>
+              </div>
+
+              <!-- 4 cards -->
+              <div class="container boxComCards">
+
+                  <!-- Card 1 -->
+                  <div id="card1" class="flipCard">
+                    <!-- Card de fato -->
+                    <div class="card card1">
+
+                      <!-- Frente -->
+                      <div class="front" style="background-color: #55797F">
+                        <img src="assets/iconeRepensar.png" alt="">
+                        <h2>REPENSAR</h2>
+                      </div>
+
+                      <!-- Verso -->
+                      <div class="back" style="border: 1px solid #55797F;">
+                        <h2 style="color: #55797F">REPENSAR</h2>
+                        <p style="color: black">Rever as próprias atitudes objetivando minimizar os impactos ao meio ambiente.</p>
+                      </div>
+                    </div>
+
+                  </div><!-- Fim do Card 1 -->
+
+                  <!-- Card 2 -->
+                  <div id="card2" class="flipCard">
+                    <!-- Card de fato -->
+                    <div class="card card2">
+
+                      <!-- Frente -->
+                      <div class="front" style="background-color: #4AADA7">
+                        <img src="assets/iconeReduzir.png" alt="">
+                        <h2>REDUZIR</h2>
+                      </div>
+
+                      <!-- Verso -->
+                      <div class="back" style="border: 1px solid #4AADA7;">
+                        <h2 style="color: #4AADA7">REDUZIR</h2>
+                        <p style="color: black">Diminuir a geração e o desperdício de resíduos.</p>
+                      </div>
+                    </div>
+
+                  </div><!-- Fim do Card 2 -->
+
+                  <!-- Card 3 -->
+                  <div id="card3" class="flipCard">
+                    <!-- Card de fato -->
+                    <div class="card card3">
+
+                      <!-- Frente -->
+                      <div class="front" style="background-color: #9FDFAF">
+                        <img src="assets/iconeReutilizar.png" alt="">
+                        <h2>REUTILIZAR</h2>
+                      </div>
+
+                      <!-- Verso -->
+                      <div class="back" style="border: 1px solid #9fdfaf;">
+                        <h2 style="color: #9fdfaf">REUTILIZAR</h2>
+                        <p style="color: black">Evitar o descarte de materiais que podem ser utilizados novamente para a mesma ou para outra aplicação.</p>
+                      </div>
+                    </div>
+
+                  </div><!-- Fim do Card 3 -->
+
+                  <!-- Card 4 -->
+                  <div id="card4" class="flipCard">
+                    <!-- Card de fato -->
+                    <div class="card card4">
+
+                      <!-- Frente -->
+                      <div class="front" style="background-color: #E5FBC4">
+                        <img src="assets/iconeReciclarVerde.png" alt="">
+                        <h2 style="color: #5c7f82">RECICLAR</h2>
+                      </div>
+
+                      <!-- Verso -->
+                      <div class="back" style="border: 1px solid #5c7f82;">
+                        <h2 style="color: #5c7f82">RECICLAR</h2>
+                        <p style="color: black">Utilizar o material descartado como matéria-prima em novo processo.</p>
+                      </div>
+                    </div>
+
+                  </div><!-- Fim do Card 4 -->
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div style="background-color:white;">
+              <div class="container espacoSuperiorGrande">
+                <p style="color: #7BBC9B; font-weight: bold; font-size: 1.2rem">Ações para incorporar no dia a dia</p>
+                <p>Tomando como base a política dos 4R, é possível implantar ações em casa, no ambiente de trabalho, no bairro. Vamos ver algumas sugestões?</p>
+              </div>
+
+              <!-- Caixa com a dinâmica diferente -->
+              <div class="container" style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 25px;">
+
+
+                  <!-- Botões -->
+                  <div class="botoesCelular">
+
+                    <!-- Botão 1 -->
+                    <div class="repensar ativo" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeRepensar.png" alt="">
+                        <img src="assets/iconeRepensarVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div>REPENSAR</div>
+                    </div>
+
+                    <span class="collapse" id="collapseExample1">
+                      <div class="quadrosCelular">
+                        <!-- Quadro 1 -->
+                        <div class="quadro">
+                          <ul>
+                            <li>Como é o seu gasto de energia elétrica?</li>
+                            <li>Você utiliza o carro todos os dias?</li>
+                            <li>Você faz compras por impulso?</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </span>
+
+
+                    <!-- Botão 2 -->
+                    <div class="reduzir" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeReduzir.png" alt="">
+                        <img src="assets/iconeReduzirVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div>REDUZIR</div>
+                    </div>
+
+                    <span class="collapse" id="collapseExample2">
+                      <div class="quadrosCelular">
+                        <!-- Quadro 2 -->
+                        <div class="quadro">
+                          <ul>
+                            <li>Você fecha as torneiras enquanto escova os dentes?</li>
+                            <li>Você dá preferência para as lâmpadas LED?</li>
+                            <li>Você utiliza embalagens recicláveis, como papel e papelão?</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </span>
+
+
+
+                    <!-- Botão 3 -->
+                    <div class="reutilizar" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeReutilizar.png" alt="">
+                        <img src="assets/iconeReutilizarVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div>REUTILIZAR</div>
+                    </div>
+
+                    <span class="collapse" id="collapseExample3">
+                      <div class="quadrosCelular">
+                        <!-- Quadro 3 -->
+                        <div class="quadro">
+                          <ul>
+                            <li>Você faz impressão utilizando os dois lados do papel?</li>
+                            <li>Você reaproveita cascas de frutas e legumes para adubar plantas?</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </span>
+
+                    <!-- Botão 4 -->
+                    <div class="reciclar" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeReciclarVerde.png" alt="">
+                        <img src="assets/iconeReciclarVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div style="color: #5c7f82">RECICLAR</div>
+                    </div>
+
+                    <span class="collapse" id="collapseExample4">
+                      <div class="quadrosCelular">
+                        <!-- Quadro 4 -->
+                        <div class="quadro">
+                          <ul>
+                            <li>Você reutiliza vídeos de conserva e potes plásticos?</li>
+                            <li>Você separa o lixo orgânico do reciclável?</li>
+                            <li>Você descarta corretamente os resíduos perigosos (produtos químicos, pilhas, medicamentos)?</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </span>
+
+                  </div>
+
+
+                  <!-- Botões -->
+                  <div class="botoes">
+
+                    <!-- Botão 1 -->
+                    <div class="repensar ativo">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeRepensar.png" alt="">
+                        <img src="assets/iconeRepensarVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div>REPENSAR</div>
+                    </div>
+
+                    <!-- Botão 2 -->
+                    <div class="reduzir">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeReduzir.png" alt="">
+                        <img src="assets/iconeReduzirVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div>REDUZIR</div>
+                    </div>
+
+                    <!-- Botão 3 -->
+                    <div class="reutilizar">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeReutilizar.png" alt="">
+                        <img src="assets/iconeReutilizarVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div>REUTILIZAR</div>
+                    </div>
+
+                    <!-- Botão 4 -->
+                    <div class="reciclar" style="margin-bottom: 0px">
+                      <!-- Imagem -->
+                      <div>
+                        <img src="assets/iconeReciclarVerde.png" alt="">
+                        <img src="assets/iconeReciclarVerde.png" alt="">
+                      </div>
+                      <!-- Texto -->
+                      <div style="color: #5c7f82">RECICLAR</div>
+                    </div>
+
+                  </div>
+
+                  <!-- Quadros -->
+                  <div class="quadros">
+
+                    <!-- Quadro 1 -->
+                    <div class="quadro telaWeb">
+                      <span>Como é o seu gasto de energia elétrica?</span>
+                      <span>Você utiliza o carro todos os dias?</span>
+                      <span>Você faz compras por impulso?</span>
+                    </div>
+
+                    <!-- Quadro 2 -->
+                    <div class="quadro telaWeb" style="display:none">
+                      <span>Você fecha as torneiras enquanto escova os dentes?</span>
+                      <span>Você dá preferência para as lâmpadas LED?</span>
+                      <span>Você utiliza embalagens recicláveis, como papel e papelão?</span>
+                    </div>
+
+                    <!-- Quadro 3 -->
+                    <div class="quadro telaWeb" style="display:none">
+                      <span>Você faz impressão utilizando os dois lados do papel?</span>
+                      <span>Você reaproveita cascas de frutas e legumes para adubar plantas?</span>
+                    </div>
+
+                    <!-- Quadro 4 -->
+                    <div class="quadro telaWeb" style="display: none">
+                      <span>Você reutiliza vídeos de conserva e potes plásticos?</span>
+                      <span>Você separa o lixo orgânico do reciclável?</span>
+                      <span>Você descarta corretamente os resíduos perigosos (produtos químicos, pilhas, medicamentos)?</span>
+                    </div>
+                  </div><!-- Fim dos quadros -->
+                </div><!-- Fim da caixa -->
+
+              <div class="container espacoSuperiorGrande boxNoticias">
+                <img src="assets/figura1.svg" alt="">
+              </div>
+
+              <div class="container espacoSuperiorGrande">
+                <p style="font-size: 1.1rem; color:#7bbc9b"><strong>ECOnotícias</strong></p>
+                <p style="font-size: 1.1rem; color:#7cc2b6">Quer ficar por dentro do que envolve a educação ambiental?</p>
+                <p>Acesse as páginas a seguir:</p>
+              </div>
+
+              <!-- Notícias 1 e 2 -->
+              <div class="container boxNoticias espacoSuperiorGrande" style="margin-top:10px">
+                <div>
+                  <a href="http://www.impactounesp.com.br/search/label/Educa%C3%A7%C3%A3o" target="_blank">
+                    <img src="assets/noticia1.png" alt="">
+                  </a>
+                  <p>Impacto Ambiental</p>
+                </div>
+
+                <div>
+                  <a href="https://www.oeco.org.br/noticias/" target="_blank">
+                    <img src="assets/noticia2.png" alt="">
+                  </a>
+                  <p>O Eco</p>
+                </div>
+              </div>
+
+              <!-- Notícias 3 e 4 -->
+              <div class="container boxNoticias">
+                <div>
+                  <a href="https://envolverde.cartacapital.com.br/category/canais-cat/ambiente/" target="_blank">
+                    <img src="assets/noticia3.png" alt="">
+                  </a>
+                  <p>Agência Envolverde</p>
+                </div>
+
+                <div>
+                  <a href="http://www.agenda2030.com.br/" target="_blank">
+                    <img src="assets/noticia4.png" alt="">
+                  </a>
+                  <p>Agenda 2030</p>
+                </div>
+              </div>
+
+              <!-- Notícias 5 e 6 -->
+              <div class="container boxNoticias">
+                <div>
+                  <a href="http://www.sustentaculos.pro.br/" target="_blank">
+                    <img src="assets/noticia5.png" alt="">
+                  </a>
+                  <p>Sustentáculos</p>
+                </div>
+
+                <div>
+                  <a href="http://tecnologiasocial.fbb.org.br/tecnologiasocial/principal.htm" target="_blank">
+                    <img src="assets/noticia6.png" alt="">
+                  </a>
+                  <p>Banco de Tecnologias Sociais</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="cred-rea">
+
+        <!-- Comente em caso de adaptação do REA -->
+        <p>
+          <span>Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2019.txt" target="_blank">MIT</a>.
+            Você pode utilizá-lo, compartilhá-lo e modificá-lo.</span>
+          <span><button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button></span>
+          <span><a href="#" target="_blank" aria-label="GitHub">GitHub <i class="fab fa-github"></i></a></span>.
+          <p>
+            <!-- Descomente em caso de adaptação do REA -->
+            <!-- <p>
+          <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+          <span><a href="#">Versão original da Univesp</a></span>
+        </p> -->
+      </div>
+
+      <div class="aval-rea d-flex">
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSfOgp6cI0OHQ6YqUh6zAQyOuP2CbHiEnth7qvBMpi0NerMWsQ/viewform?usp=pp_url&entry.542052009=ECOconhecimento" target="_blank">Avaliar este recurso</a>
+
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdQrNoarS5M_II74dBQ8YXXeFWPG7By80XwytBeP4vEaYO26g/viewform?usp=pp_url&entry.1523910789=Nome+do+Recurso" target="_blank">Reportar erro</a>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- AVISO =+960px -->
+  <!-- Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar -->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- Créditos -->
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
+
+          <h6>Equipe</h6>
+          <p><span class="funcao">Docente responsável</span>Juliana Augusta Verona</p>
+          <p><span class="funcao">Coordenação</span>Édison Trombeta</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span>Nádia Pirillo</p>
+          <p><span class="funcao">Ilustração</span>Celso de Oliveira</p>
+          <p><span class="funcao">Layout</span>Natasha Higa</p>
+          <p><span class="funcao">Programação</span>Alberto Ortiz</p>
+          <!-- <p><span class="funcao">Revisão</span>Fulano de Tal, Ciclano de Tal</p> -->
+
+        </div>
+        <div class="modal-footer">
+          <p>Novembro/2019</p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $("#share-buttons");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [{
+          share: "facebook",
+          label: "Facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          label: "Twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          label: "Whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: true,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="javascripts/events.js"></script>
+
+  <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+  <!-- Analytics. Remova em caso de reutilização do REA -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+</body>
+
+</html>

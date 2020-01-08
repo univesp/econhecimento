@@ -1,0 +1,669 @@
+body {
+  background-color: white !important;
+}
+
+hr {
+  margin-top: 100px;
+  margin-bottom: 1rem;
+  border: 1px;
+  border-top: 1px solid #55797f;
+  width: 100%;
+}
+
+#fundo, #frente {
+  width: 600%;
+}
+
+.botaoParalax {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0px;
+  border: 1px solid #e5fbc4;
+}
+
+.botaoParalax>div {
+  background-color: #7bbc9b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botoesCelular {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 0% 3%;
+  width: 100%;
+  align-items: center;
+  min-height: 328px;
+}
+
+.botoesCelular>div {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  color: white;
+  padding: 2% 4% 2% 0%;
+  min-width: 250px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 15px;
+}
+
+.botoesCelular>div>div {
+  margin-left: 5%;
+}
+
+.botoesCelular img {
+  width: 40px;
+  height: 40px;
+}
+
+.quadro ul {
+  font-weight: initial;
+  padding-inline-start: 10px;
+}
+
+#telaInicial {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 100px 0px;
+}
+
+#telaInicial h2 {
+  text-align: center;
+  color: #7bbc9b;
+  font-size: 110px;
+  z-index: 99;
+}
+
+#telaInicial>div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#telaInicial>div>div {
+  width: 50%;
+}
+
+.paragrafoBotao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px 0px;
+}
+
+.paragrafoBotao>div {
+  max-width: 535px;
+}
+
+.imagem {
+  position: relative;
+}
+
+.imagem>img {
+  width: 190%;
+  position: absolute;
+  top: -38%;
+  left: -64%;
+}
+
+#boaEcoleitura {
+  background-color: #7bbc9b;
+  padding: 3% 3%;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 150;
+}
+
+#boaEcoleitura:hover {
+  opacity: 0.8;
+}
+
+.espacoSuperiorGrande {
+  margin-top: 50px;
+}
+
+.repensar {
+  background-color: #55797F;
+}
+
+.repensar.ativo {
+  background-color: white;
+  color: #55797F;
+}
+
+.repensar img:last-of-type, .repensar.ativo img:first-of-type, .reduzir img:last-of-type,
+.reduzir.ativo img:first-of-type, .reduzir.ativo img:last-of-type, .reutilizar img:last-of-type,
+.reutilizar.ativo img:first-of-type, .reciclar.ativo img:first-of-type, .reciclar img:last-of-type,
+.textosParalax p {
+  display: none;
+}
+
+.repensar.ativo img:last-of-type, .reutilizar.ativo img:last-of-type, .reciclar.ativo img:last-of-type, .reduzir.ativo img:last-of-type {
+  display: block;
+}
+
+.reduzir {
+  background-color: #4AADA7;
+}
+
+.reduzir.ativo {
+  background-color: white;
+  color: #4AADA7;
+}
+
+.reutilizar {
+  background-color: #9FDFAF;
+}
+
+.reutilizar.ativo {
+  background-color: white;
+  color: #9FDFAF;
+}
+
+.reciclar {
+  background-color: #E5FBC4;
+  margin-bottom: 0%;
+}
+
+.reciclar.ativo {
+  background-color: white;
+  color: #E5FBC4;
+}
+
+/*////////////////////////// Classes para controlar o Card ///////////////////////*/
+.flipCard {
+  width: auto;
+  height: auto;
+  perspective: 800px;
+}
+
+.card {
+  width: 210px;
+  height: 280px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  cursor: pointer;
+}
+
+.card>div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.front {
+  transition: 0.5s;
+}
+
+.front:hover {
+  width: 105%;
+  height: 105%;
+}
+
+.front img {
+  width: 45%;
+}
+
+.boxComCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 25px 0px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  padding: 5%;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 3%;
+  height: 100%;
+  font-weight: bold;
+  max-width: 445px;
+}
+
+.quadros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 4% 4%;
+  border: 1px solid black;
+}
+
+.quadrosCelular {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0% 4% 2% 4%;
+}
+
+.quadrosCelular>.quadro {
+  padding: 0px;
+}
+
+.botoesCelular span {
+  width: 100%;
+}
+
+.quadro span::before {
+  margin: 0px 10px;
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #e5fbc4;
+  position: relative;
+  top: 2px;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0% 3%;
+  width: 50%;
+  align-items: center;
+  min-height: 328px;
+}
+
+.botoes>div {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  color: white;
+  padding: 2% 4% 2% 0%;
+  min-width: 250px;
+  cursor: pointer;
+  margin-bottom: 3%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 100%;
+  z-index: 100;
+  transition-duration: 0.5s;
+  max-height: 61px;
+}
+
+.botoes>div:hover {
+  padding: 2% 4% 4% 8%;
+}
+
+.botoes>div>div {
+  margin-left: 5%;
+}
+
+.botoes img {
+  width: 40px;
+  height: 40px;
+}
+
+.boxNoticias {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.boxNoticias>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.boxNoticias p {
+  margin-top: 15px;
+}
+
+.boxNoticias>div>a>img {
+  border: 1px solid green;
+  width: auto;
+  height: auto;
+}
+
+.boxNoticias>div :hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #7bbc9b !important;
+}
+
+.caixaDoParalax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1140px;
+  height: 648px;
+  border: 1px solid #e5fbc4;
+  position: relative;
+  overflow: hidden;
+  background-color: #00b2ff42;
+  transition: 2.5s;
+  border-bottom: 0px;
+}
+
+.caixaDoParalax img {
+  transition-duration: 2.5s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+}
+
+.textosParalax {
+  width: 1140px;
+  padding: 2% 5%;
+  background-color: #e5fbc4;
+  min-height: 113.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #e5fbc4;
+}
+
+.textosParalax p {
+  margin-bottom: 0px;
+}
+
+#fundo {
+  width: 669.73%;
+}
+
+#frenteCena1 {
+  width: 232.98%;
+}
+
+#meioCena1 {
+  width: 245.96%;
+}
+
+#arvoreTransicao {
+  width: 112.28%;
+}
+
+#meioCena2 {
+  width: 210.87%;
+}
+
+#meioCena3 {
+  width: 149.47%;
+}
+
+#troncoTransicao {
+  width: 80.7%;
+}
+
+#meioCena4 {
+  width: 149.47%;
+}
+
+#meioCena42 {
+  width: 141.05%;
+}
+
+#meioCena5 {
+  width: 283.5%;
+}
+
+#matoFrenteCena5 {
+  width: 168.4%;
+}
+
+#matoTransicaoCena4 {
+  width: 103.85%;
+}
+
+#menino {
+  width: 25.15%;
+  height: 62.5%;
+}
+
+#terra {
+  width: 50.29%;
+}
+
+#pessoas {
+  width: 80%;
+}
+
+#fala01, #fala02, #fala03, #fala04 {
+  width: 0.28%;
+}
+
+#prediosCena2 {
+  width: 100%;
+}
+
+#nuvens {
+  width: 282.28%;
+  bottom: 44%;
+}
+
+#bicicleta {
+  width: 27.15%;
+}
+
+#bicicleta2 {
+  width: 38.15%;
+}
+
+.botoesMandrake {
+  opacity: 0.5;
+}
+
+/* /////////////////////////////////////////////////// 1200px //////////////////////////////////*/
+@media (max-width: 1200px) {
+  .imagem>img {
+    width: 189%;
+    top: -28%;
+    left: -61%;
+  }
+
+  #telaInicial h2 {
+    font-size: 95px;
+  }
+
+  .paragrafoBotao>div {
+    max-width: 476px;
+  }
+
+  .caixaDoParalax {
+    width: 930px;
+    height: 531px;
+  }
+
+  .textosParalax {
+    height: auto;
+    width: 930px;
+  }
+}
+
+/* /////////////////////////////////////////////////// 992px //////////////////////////////////*/
+@media (max-width: 992px) {
+  .imagem>img {
+    top: -4%;
+    left: -64%;
+    width: 200%;
+  }
+
+  #telaInicial h2 {
+    font-size: 73px;
+  }
+
+  .boxComCards {
+    max-width: 540px;
+  }
+
+  .flipCard {
+    margin-bottom: 15px;
+  }
+
+  .carousel-item>div {
+    min-height: 100px;
+  }
+
+  .caixaDoParalax {
+    width: 90vw;
+    height: 51.39vw;
+  }
+
+  .textosParalax {
+    height: auto;
+    width: 90vw;
+  }
+}
+
+/* /////////////////////////////////////////////////// 768px //////////////////////////////////*/
+@media (max-width: 768px) {
+  #telaInicial>div {
+    flex-direction: column;
+  }
+
+  .imagem>img {
+    width: 100%;
+    position: static;
+  }
+
+  #telaInicial>div>div {
+    width: 100%;
+  }
+
+  #telaInicial h2 {
+    font-size: 40px;
+  }
+
+  .paragrafoBotao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paragrafoBotao>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .botoes, .quadros {
+    display: none;
+  }
+
+  .botoesCelular {
+    display: flex;
+  }
+
+  .carousel-item>div {
+    min-height: 117px;
+  }
+}
+
+/* /////////////////////////////////////////////////// 576px //////////////////////////////////*/
+@media (max-width: 576px) {
+  .boxNoticias>div>a>img {
+    width: 100%;
+  }
+
+  .carousel-control-prev {
+    left: 35%;
+  }
+
+  .textosParalax {
+    height: auto;
+    min-height: 121.5px;
+  }
+
+  .botaoParalax {
+    width: 90vw;
+  }
+}
+
+/* /////////////////////////////////////////////////// 435px //////////////////////////////////*/
+@media (max-width: 435px) {
+  .card {
+    width: 280px;
+  }
+
+  .front img {
+    width: 35%;
+  }
+}
+
+/* /////////////////////////////////////////////////// 420px //////////////////////////////////*/
+@media (max-width: 420px) {
+  #telaInicial h2 {
+    font-size: 30px;
+  }
+
+  .carousel-item p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-item>div {
+    min-height: 110px;
+  }
+
+  .textosParalax {
+    height: auto;
+  }
+}
+
+/* /////////////////////////////////////////////////// 320px //////////////////////////////////*/
+@media (max-width: 320px) {
+  #telaInicial h2 {
+    font-size: 30px;
+  }
+
+  .textosParalax {
+    min-height: 182.5px;
+  }
+}
